@@ -10,7 +10,7 @@ terraform output -json vm_nat_ip > terraform_output.json
 
 # Шаг 3: Генерация инвентаря для Ansible
 echo "Генерация инвентаря для Ansible..."
-python3 ~/rep/yaprac/ansible/invscript.py
+python3 ../ansible/invscript.py 
 
 # Вывод инвентаря
 echo "Динамический инвентарь сгенерирован и сохранен в файл inventory.json"
