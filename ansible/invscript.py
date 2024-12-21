@@ -2,7 +2,7 @@ import json
 import os
 
 # Шаг 1: Загрузка данных из terraform_output.json
-with open('~rep/yaprac/terraform/terraform_output.json') as f:  # Путь относительно директории с Python-скриптом
+with open('../terraform/terraform_output.json') as f:  # Путь относительно директории с Python-скриптом
     terraform_output = json.load(f)
 
 inventory = {
@@ -21,7 +21,8 @@ inventory = {
 }
 
 # Шаг 3: Сохранение инвентаря в файл JSON для Ansible
-inventory_file_path = os.path.join(os.getcwd(), 'inventory.json')  # Путь будет внутри директории с Ansible-скриптом
+inventory_dir = '../ansible'
+inventory_file_path = os.path.join(inventory_dir, 'inventory.json') # Путь будет внутри директории с Ansible-скриптом
 
 with open(inventory_file_path, 'w') as f:
     json.dump(inventory, f, indent=4)
