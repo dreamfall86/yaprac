@@ -1,2 +1,8 @@
 ---
 # tasks file for default_packages
+- name: Установка программ 
+  apt: 
+    name: "{{ item }}" #Имя пакета из цикла
+    state: present #Параметр действия. present - установить, absent - удалить
+  loop:
+    - "{{ packages_to_install }}" #Цикл будет перебирать все значения из переменной "packages"

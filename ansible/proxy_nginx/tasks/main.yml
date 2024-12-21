@@ -1,2 +1,30 @@
 ---
 # tasks file for proxy_nginx
+- name: Установка пакетов для Nginx
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+
+- name: Копирование конфигурации Nginx
+  template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/sites-available/proxy_nginx
+    mode: 0644
+
+- name: Удаление старых символических ссылок
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+
+- name: Создание символической ссылки для активации конфигурации
+  file:
+    src: /etc/nginx/sites-available/proxy_nginx
+    dest: /etc/nginx/sites-enabled/proxy_nginx
+    state: link
+
+- name: Перезапуск Nginx
+  service:
+    name: nginx
+    state: restarted
+    enabled: true

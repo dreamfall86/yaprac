@@ -1,0 +1,32 @@
+{
+    "all": {
+        "children": {
+            "nginx": {
+                "hosts": {
+                    "vm1_nginx_1": {
+                        "ansible_host": "158.160.57.240",
+                        "ansible_user": "root",
+                        "ansible_ssh_private_key_file": "/home/dream/.ssh/git",
+                        "ansible_ssh_common_args": "-o StrictHostKeyChecking=no"
+                    },
+                    "vm2_nginx_2": {
+                        "ansible_host": "158.160.57.220",
+                        "ansible_user": "root",
+                        "ansible_ssh_private_key_file": "/home/dream/.ssh/git",
+                        "ansible_ssh_common_args": "-o StrictHostKeyChecking=no"
+                    }
+                }
+            },
+            "proxy": {
+                "hosts": {
+                    "vm3_proxy": {
+                        "ansible_host": "158.160.41.134",
+                        "ansible_user": "root",
+                        "ansible_ssh_private_key_file": "/home/dream/.ssh/git",
+                        "ansible_ssh_common_args": "-o StrictHostKeyChecking=no"
+                    }
+                }
+            }
+        }
+    }
+}
