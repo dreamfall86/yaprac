@@ -1,0 +1,7 @@
+users:
+  - name: root
+    groups: sudo
+    shell: /bin/bash
+    sudo: 'ALL=(ALL) NOPASSWD:ALL'
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMY3jmYVBLMi4Ra9uTytNsJBT2IJqqZvvIjm51nmHl+A dream@dream-Lenovo-ThinkBook-14-IIL
