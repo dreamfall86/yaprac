@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Шаг 1: Запуск terraform для создания виртуальных машин
+echo "Запуск terraform apply для создания виртуальных машин..."
+terraform apply -auto-approve
+
+# Шаг 2: Извлечение IP-адресов из Terraform
+echo "Получение IP-адресов из Terraform..."
+terraform output -json vm_nat_ip > terraform_output.json
+
+# Шаг 3: Генерация инвентаря для Ansible
+echo "Генерация инвентаря для Ansible..."
+python3 ~/rep/yaprac/ansible/invscript.py
+
+# Вывод инвентаря
+echo "Динамический инвентарь сгенерирован и сохранен в файл inventory.json"
+
