@@ -1,5 +1,5 @@
 virtual_machines = {
-    "vm-1" = {
+    "vm1_nginx_1" = {
       vm_name      = "vm1" # Имя ВМ
       vm_desc      = "Описание для инженеров. Его видно только здесь" # Описание
       vm_cpu       = 2 # Кол-во ядер процессора
@@ -8,7 +8,7 @@ virtual_machines = {
       disk_name    = "ubuntudisk1" # Название диска
       template     = "fd85bll745cg76f707mq" # ID образа ОС для использования
     },
-    "vm-2" = {
+    "vm2_nginx_2" = {
       vm_name      = "vm2" # Имя ВМ
       vm_desc      = "Описание для инженеров. Его видно только здесь"
       vm_cpu       = 2 # Кол-во ядер процессора
@@ -17,7 +17,7 @@ virtual_machines = {
       disk_name    = "ubuntudisk2" # Название диска
       template     = "fd85bll745cg76f707mq" # ID образа ОС для использования
     },
-    "vm-3" = {
+    "vm3_proxy" = {
       vm_name      = "vm3" # Имя ВМ
       vm_desc      = "Описание для инженеров. Его видно только здесь"
       vm_cpu       = 2 # Кол-во ядер процессора
