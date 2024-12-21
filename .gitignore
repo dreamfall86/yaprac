@@ -1,5 +1,5 @@
-~/rep/yaprac/terraform/key.json
-~/rep/yaprac/terraform/.terraformc
-~/rep/yaprac/terraform/.terraform
-~/rep/yaprac/terraform/.terraform.lock.hcl
+/yaprac/terraform/key.json
+/yaprac/terraform/.terraformc
+/yaprac/terraform/.terraform
+/yaprac/terraform/.terraform.lock.hcl
 
